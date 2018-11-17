@@ -11,4 +11,8 @@ origem_medida = [735 343] //valor da posição mínima da "régua" que foi desen
 // dado que a relação foi desenhada na vertical, a relação pixels/centímetros será somente 
 // a diferença das coordenadas y
 // relacao = (( origem_medida(2) - topo_medida(2) )*100) / 52
-relacao =  248.07692 // px/m 
+relacao =  248.07692 // px/m
+
+
+// aceleracao_gravitacional = 9.81*relacao
+aceleracao_gravitacional = 2433.6346 // px/s²
