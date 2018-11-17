@@ -4,6 +4,8 @@
 posicao_topo = [681 133] // ápice da posiação y, velocidade igual a zero
 posicao_chao = [724 621] // menor posição, altura igual a 0
 
+// momento do topo e da chegada ao chao, em segundos
+tempos = [3.614 4.273]
 
 topo_medida = [741 214] // valor da posição máxima da "régua" que foi desenhada no quadro
 origem_medida = [735 343] //valor da posição mínima da "régua" que foi desenhada no quadro
