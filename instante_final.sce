@@ -1,9 +1,10 @@
-function inst = instante_final(t, y)
-    inst = t(1);
+function [tf, yf] = instante_final(t, y)
+    tf = t(1);
     n = length(t);
     for i=1:1:n
         if floor(y(i)) == 0
-            inst = t(i);
+            tf = t(i);
+            yf = y(i);
         end
     end
 endfunction
