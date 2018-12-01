@@ -17,7 +17,6 @@ function [t, y, z] = runge_kutta_4(a, b, h, y0, z0)
         k4y = dy(t(i-1) + h, y(i-1) + k3y*h, z(i-1) + k3z*h);
         k4z = dz(t(i-1) + h, y(i-1) + k3y*h, z(i-1) + k3z*h);
         //agora fazer a média ponderada das inclinações
-        //trabalho de coorno da porra!
         ky = 1/6*(k1y + 2*k2y + 2*k3y + k4y);
         kz = 1/6*(k1z + 2*k2z + 2*k3z + k4z);
         //finalmente ...
