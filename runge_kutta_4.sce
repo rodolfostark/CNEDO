@@ -2,7 +2,7 @@ function [t, y, z] = runge_kutta_4(a, b, h, y0, z0)
     t = a:h:b;
     y(1) = y0;
     z(1) = z0;
-    n = length(x);
+    n = length(t);
     for i=2:1:n
         //primero vamos realizar o calculo das inclinações k1z e k1y
         k1y = dy(x(i-1), y(i-1), z(i-1));
