@@ -52,3 +52,30 @@ plot(t_grafico_A1, y_grafico_D1);
 plot(t_grafico_A1, y_grafico_D2);
 [a,b] = instante_final(t_grafico_A1, y_grafico_D1);
 [c,d] = instante_final(t_grafico_A1, y_grafico_D2);
+
+
+-------------------------------------------------------------------------
+// achando o 0 de RK2, linear e quadratico, com h = 0.1
+[td, yd, zd] = runge_kutta_2(3.614, 5, 0.1, (posicao_chao(2) - posicao_topo(2)),0);
+coef_d1 = polinomio(td,yd,1);
+coef_d2 = polinomio(td,yd,2);
+t_grafico_A1 = 3.614 : 0.1 : 5;
+y_grafico_D1 = grafico1grau(t_grafico_A1,coef_d1);
+y_grafico_D2 = grafico2grau(t_grafico_A1,coef_d2);
+plot(t_grafico_A1, y_grafico_D1);
+plot(t_grafico_A1, y_grafico_D2);
+[a,b] = instante_final(t_grafico_A1, y_grafico_D1);
+[c,d] = instante_final(t_grafico_A1, y_grafico_D2);
+
+-------------------------------------------------------------------------
+// achando o 0 de RK2, linear e quadratico, com h = 0.001
+[td, yd, zd] = runge_kutta_2(3.614, 5, 0.001, (posicao_chao(2) - posicao_topo(2)),0);
+coef_d1 = polinomio(td,yd,1);
+coef_d2 = polinomio(td,yd,2);
+t_grafico_A1 = 3.614 : 0.1 : 5;
+y_grafico_D1 = grafico1grau(t_grafico_A1,coef_d1);
+y_grafico_D2 = grafico2grau(t_grafico_A1,coef_d2);
+plot(t_grafico_A1, y_grafico_D1);
+plot(t_grafico_A1, y_grafico_D2);
+[a,b] = instante_final(t_grafico_A1, y_grafico_D1);
+[c,d] = instante_final(t_grafico_A1, y_grafico_D2);
