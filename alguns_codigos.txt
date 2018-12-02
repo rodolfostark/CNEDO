@@ -1,0 +1,42 @@
+[tc, yc, zc] = runge_kutta_4(3.614, 4.273, 0.001, (posicao_chao(2) - posicao_topo(2)),0);
+
+[td, yd, zd] = runge_kutta_4(3.614, 4.273, 0.1, (posicao_chao(2) - posicao_topo(2)),0);
+
+coef_c1 = polinomio(tc,yc,1)
+
+coef_c2 = polinomio(tc,yc,2)
+
+coef_d1 = polinomio(td,yd,1)
+
+coef_d2 = polinomio(td,yd,2)
+
+t_grafico_B1 = 3.614:0.001:4.273;
+
+t_grafico_A1 = 3.614 : 0.1 : 4.273;
+
+y_grafico_C1 = grafico1grau(t_grafico_B1,coef_c1)
+
+plot(t_grafico_B1,y_grafico_C1)
+
+y_grafico_C2 = grafico2grau(t_grafico_B1,coef_c2)
+
+plot(t_grafico_B1,y_grafico_C2)
+
+y_grafico_D1 = grafico1grau(t_grafico_A1,coef_d1)
+
+plot(t_grafico_A1,y_grafico_D1)
+
+y_grafico_D2 = grafico2grau(t_grafico_A1,coef_d2)
+
+plot(t_grafico_A1,y_grafico_D2)
+
+
+-------------------------------------------------------------------------------
+// achando o 0 de RK4, linear, com h = 0.001
+[tc, yc, zc] = runge_kutta_4(3.614, 5, 0.001, (posicao_chao(2) - posicao_topo(2)),0);
+coef_c1 = polinomio(tc,yc,1);
+t_grafico_B1 = 3.614:0.001:5;
+y_grafico_C1 = grafico1grau(t_grafico_B1,coef_c1);
+plot(t_grafico_B1, y_grafico_C1);
+[a,b] = instante_final(t_grafico_B1, y_grafico_C1);
+
