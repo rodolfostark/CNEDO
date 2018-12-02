@@ -41,7 +41,7 @@ plot(t_grafico_B1, y_grafico_C1);
 [a,b] = instante_final(t_grafico_B1, y_grafico_C1);
 
 ----------------------------------------------------------------------------
-// achando o 0 de RK4, linear, com h = 0.1
+// achando o 0 de RK4, linear e quadratico, com h = 0.1
 [td, yd, zd] = runge_kutta_4(3.614, 5, 0.1, (posicao_chao(2) - posicao_topo(2)),0);
 coef_d1 = polinomio(td,yd,1);
 coef_d2 = polinomio(td,yd,2);
